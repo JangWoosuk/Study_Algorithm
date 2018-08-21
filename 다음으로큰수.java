@@ -1,6 +1,6 @@
-package ÇÁ·Î±×·¡¸Ó½º2;
+package í”„ë¡œê·¸ë˜ë¨¸ìŠ¤2;
 
-public class ´ÙÀ½À¸·ÎÅ«¼ö {
+public class ë‹¤ìŒìœ¼ë¡œí°ìˆ˜ {
 	
 	 public int solution(int n) {
 		 int answer = n;
@@ -8,7 +8,7 @@ public class ´ÙÀ½À¸·ÎÅ«¼ö {
 		 int loopCount=0;
 		 int [] binary= toBinary(n);
 		 boolean result=true;
-		 //ÀÌÁø¼ö¿¡¼­ 1À» Ã£¾Æ¼­ Ä«¿îÆ®¸¦ÇÑ´Ù.
+		 //ì´ì§„ìˆ˜ì—ì„œ 1ì„ ì°¾ì•„ì„œ ì¹´ìš´íŠ¸ë¥¼í•œë‹¤.
 		 for(int i =0; i<binary.length; i++){
 			 if(binary[i]==1){
 				 count1++;
@@ -34,11 +34,11 @@ public class ´ÙÀ½À¸·ÎÅ«¼ö {
 		 
 		 return answer;
 	  }
-	 //2Áø¼ö·Î º¯È¯
+	 //2ì§„ìˆ˜ë¡œ ë³€í™˜ toBinaryë¥¼ í™œìš©í•´ë„ 
 	public int[] toBinary(int n){ 
 		int count=0;
 		int x = n;
-		//2Áø¼öÀÇ ¼ıÀÚ°¡ ¸î°³³ª ÀÖ´ÂÁö È®ÀÎ
+		//2ì§„ìˆ˜ì˜ ìˆ«ìê°€ ëª‡ê°œë‚˜ ìˆëŠ”ì§€ í™•ì¸
 		 while(n>1){
 			 n=n/2;
 			 count++;
@@ -69,18 +69,18 @@ public class ´ÙÀ½À¸·ÎÅ«¼ö {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int n = 83;
-		´ÙÀ½À¸·ÎÅ«¼ö ´ÙÀ½ = new ´ÙÀ½À¸·ÎÅ«¼ö();
-		int[] binary =´ÙÀ½.toBinary(n);
-		System.out.println(n+"À» 2Áø¼ö·Î º¯È¯ÇÑ °ªÀº");
+		ë‹¤ìŒìœ¼ë¡œí°ìˆ˜ ë‹¤ìŒ = new ë‹¤ìŒìœ¼ë¡œí°ìˆ˜();
+		int[] binary =ë‹¤ìŒ.toBinary(n);
+		System.out.println(n+"ì„ 2ì§„ìˆ˜ë¡œ ë³€í™˜í•œ ê°’ì€");
 		for(int i = 0; i<binary.length;i++){
 			System.out.print(binary[i]);
 		}
 		System.out.println();
-		System.out.println("È®ÀÎÇÏ±â");
+		System.out.println("í™•ì¸í•˜ê¸°");
 		String num = Integer.toBinaryString(n);
-		System.out.println(n+"À» toBinaryStringÀ¸·Î º¯È¯ÇÑ °á°ú:"+num);
+		System.out.println(n+"ì„ toBinaryStringìœ¼ë¡œ ë³€í™˜í•œ ê²°ê³¼:"+num);
 		
-		System.out.println(´ÙÀ½.solution(15));
+		System.out.println(ë‹¤ìŒ.solution(15));
 	}	
 		
 		
