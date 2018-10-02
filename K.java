@@ -1,30 +1,28 @@
-package ÇÁ·Î±×·¡¸Ó½º_¹è¿­;
+package í”„ë¡œê·¸ë˜ë¨¸ìŠ¤_ë°°ì—´;
 
 import java.util.Arrays;
-
-/*
-		  * 
-		  * i´Â ÀÎµ¦½º°ª  j ´Â  iÀÎµ¦½ººÎÅÍ jÀÎµ¦½º ±îÁöÀÇ ¹è¿­À» ÀÚ¸£°í Á¤·Ä, k´Â Á¤·ÄÇÑ ¹è¿­ÀÇ  ÀÎµ¦½º.
-		  * 
-		  * arr±æÀÌÀ¸ 100ÀÌÇÏ commandsÀÇ ±æÀÌ´Â 50ÀÌÇÏ 
-		  * 
-		  * 1.¸ÕÀú ¹è¿­À» »õ·Î ¹Ş¾Æ¿À°í ±× ¹è¿­À» iºÎÅÍ j±îÁö ³Ö´Â´Ù.
-		  * 2.¼±ÅÃ Á¤·ÄÀ» ÀÌ¿ëÇÏ¿© ¹è¿­À» Á¤·Ä
-		  * 3.k¹øÂ° ÀÎµ¦½º¸¦  answer¿¡´Ù°¡ Ãß°¡.
-		  * */
+	
 public class K {
 	
 	
 	
 	 public int[] solution(int[] array, int[][] commands) {
 	        int[] answer = new int[commands.length];
-
-	        for(int i=0; i<commands.length; i++){
-	            int[] temp = Arrays.copyOfRange(array, commands[i][0]-1, commands[i][1]);
-	            Arrays.sort(temp);
-	            answer[i] = temp[commands[i][2]-1];
-	        }
-
-	        return answer;
+	        int index = 0;
+	       for(int i = 0; i<commands.length; i++){
+	    	   int start = commands[i][0];
+	    	   int end = commands[i][1];
+	    	   int k = commands[i][2];
+	    	   int[] temp = new int[end-start+1];
+	    	   int x=0;
+	    	   for(int j = start-1; j<end; j++){
+	    		   temp[x++]=array[j];
+	    	   }   
+	    		   Arrays.sort(temp);
+	    		   
+	    		   answer[index++] = temp[k-1];
+	    	   
+	       }
+	       return answer;
 	    }
 	}
